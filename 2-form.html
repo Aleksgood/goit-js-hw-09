@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Form</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.css"
@@ -18,6 +18,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script type="module" crossorigin src="/goit-js-hw-09/2-form.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/modulepreload-polyfill-B5Qt9EMX.js">
     <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/styles-BTMkLMP3.css">
   </head>
   <body>
@@ -26,19 +28,41 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-link active" href="./index.html">Home</a>
+              <a class="nav-link" href="./index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./1-gallery.html">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./2-form.html">Form</a>
+              <a class="nav-link active" href="./2-form.html">Form</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
+      <div class="container">
+        <form class="feedback-form" autocomplete="off">
+          <label class="feedback__label">
+            Email
+            <input
+              class="feedback__input"
+              type="email"
+              name="email"
+              autofocus
+            />
+          </label>
+          <label class="feedback__label">
+            Message
+            <textarea
+              class="feedback__textarea"
+              name="message"
+              rows="8"
+            ></textarea>
+          </label>
+          <button class="feedback__button" type="submit">Submit</button>
+        </form>
+      </div>
     </main>
   </body>
 </html>
